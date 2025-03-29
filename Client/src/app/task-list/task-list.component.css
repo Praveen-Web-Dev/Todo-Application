@@ -1,0 +1,23 @@
+.task-list{
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    color: #fff;
+}
+.task-container{
+    background-color: #808b96;
+    width:30%;
+    margin-left: 5%;
+    margin-bottom: 10px;
+    border-top-left-radius: 6px;
+    border-bottom-left-radius: 6px;
+}
+.task-side-div{
+    background-color: #273746;
+    width: 8px;
+    border-top-left-radius: 6px;
+    border-bottom-left-radius: 6px;
+    
+}
+
+

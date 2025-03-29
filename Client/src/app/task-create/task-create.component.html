@@ -1,0 +1,34 @@
+<div class="modal show fade d-block" tabindex="-1" role="dialog">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <form (ngSubmit)="onSubmit()">
+          <div class="modal-header">
+            <h5 class="modal-title">Add New Task</h5>
+            <button type="button" class="btn-close" (click)="closeDialog()"></button>
+          </div>
+          <div class="modal-body">
+            <div class="mb-3">
+              <label>Title</label>
+              <input type="text" class="form-control" [(ngModel)]="newTask.title" name="title" required />
+            </div>
+            <div class="mb-3">
+              <label>Description</label>
+              <textarea class="form-control" [(ngModel)]="newTask.description" name="description"></textarea>
+            </div>
+            <div class="mb-3">
+              <label>Due Date</label>
+              <input type="date" class="form-control" [(ngModel)]="newTask.dueDate" name="dueDate" />
+            </div>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" (click)="closeDialog()">Cancel</button>
+            <button type="submit" class="btn btn-primary">Add Task</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+  
+  <!-- Optional backdrop -->
+  <div class="modal-backdrop fade show"></div>
+  

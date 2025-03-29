@@ -1,1 +1,22 @@
-<p>task-list works!</p>
+<app-header></app-header>
+<app-task-create *ngIf="showModal" (close)="closeTaskDialog()"></app-task-create>
+<div class="container-fluid">
+    <div class="Task-create-container">
+        <button class="task-create" (click)="openTaskDialog()">
+            Add Task
+        </button>
+        
+    </div>
+    <div *ngIf="tasks?.length">
+        <ul class="task-list">
+            <li *ngFor ="let task of tasks">
+                
+                <div class="task-container d-flex flex-row ">
+                    <div class="task-side-div"></div>
+                    <p class="task p-2">{{task.title}}</p>
+                </div>
+                
+            </li>
+        </ul>
+    </div>
+</div>
